@@ -1,58 +1,224 @@
-# Sigma Study - Peer-to-Peer Learning Platform
 
-## 📚 Overview
-Sigma Study is an innovative e-learning platform where students teach other students. It empowers learners to share knowledge, create courses, and engage in collaborative education.
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-## ✨ Features
-- 🎓 **Student-to-Student Learning**: A unique platform where students can teach and learn from each other.
-- 📖 **Course Creation**: Users can create and upload courses in various subjects.
-- 📝 **Interactive Learning**: Includes quizzes, discussions, and real-time feedback.
-- 🌍 **Accessible Education**: Open to all learners globally.
-- 📊 **Progress Tracking**: Users can track their learning journey and achievements.
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
 
-## 🛠 Tech Stack
-- **Frontend**: React, HTML, CSS, JavaScript
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB
-- **Authentication**: Firebase/Auth0
-- **Deployment**: Vercel/Netlify for frontend, Heroku for backend
 
-## 🚀 Installation
-```sh
-# Clone the repository
-git clone https://github.com/yourusername/sigma-study.git
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items:end;
+    padding: 10px 10px;
+    background: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
 
-# Navigate to the project directory
-cd sigma-study
+.logo img {
+    height: 45px;
+    width: auto;
+}
 
-# Install dependencies
-npm install
+.leftnav {
+    display: flex;
+    list-style: none;
+}
 
-# Start the development server
-npm start
-```
+.leftnav li {
+    margin: 20px 20px;
+    align-self: auto;
+    padding-right: 70px;
+    flex-direction: column;
+}
 
-## 🤝 Contribution Guidelines
-We welcome contributions from the community! Follow these steps to contribute:
-```sh
-# Fork the repository
-git fork https://github.com/yourusername/sigma-study.git
+.leftnav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
 
-# Create a new branch for your feature/fix
-git checkout -b feature-branch
+.leftnav a:hover {
+    color: #f4a261;
+}
 
-# Commit your changes
-git commit -m "Add new feature"
 
-# Push to your fork
-git push origin feature-branch
+.rightnav {
+    display: flex;
+    align-items: center;
+}
 
-# Submit a pull request on GitHub
-```
+.rightnav input {
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+}
 
-## 📜 License
-This project is licensed under the MIT License.
+.btn {
+    background: #f4a261;
+    color: rgb(255, 255, 255);
+    padding: 8px 15px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
 
-## 📧 Contact
-For any queries or suggestions, feel free to contact us at **contact@sigmastudy.com**.
+.btn:hover {
+    background: #e76f51;
+}
 
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.line {
+    width: 25px;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    margin: 6px;
+}
+
+.firstSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 90px;
+    background: linear-gradient(to right, #8542cc, #2575fc);
+    color: white;
+    min-height: 90vh;
+}
+
+.text-big {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.text-small {
+    font-size: 1.3rem;
+    margin: 19px 10px;
+    max-width: 700px;
+}
+
+.button {
+    margin-top: 50px;
+}
+.text-content{
+    font-size: 1.3rem;
+    margin: 40px 10px;
+    max-width: 700px;
+
+}
+
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.section.left {
+    flex-direction: row-reverse;
+}
+
+.thumbnail img {
+    width: 10%;
+    max-width: 40px;
+    border-radius: 100px;
+}
+
+
+.contact {
+    text-align: center;
+    padding: 50px;
+    background: #333;
+    color: white;
+}
+
+.form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.fbt {
+    background: #da5e11;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.text-footer {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: white;
+}
+
+
+@media screen and (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+
+    .leftnav, .rightnav {
+        display: none;
+    }
+
+    .v-class-resp {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: #333;
+        padding: 10px;
+    }
+
+    .h-class-resp {
+        height: auto;
+    }
+
+    .firstSection {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .thumbnail img {
+        max-width: 30px;
+    }
+}
